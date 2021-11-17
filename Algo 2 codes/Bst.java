@@ -1,4 +1,4 @@
-public class Best {
+public class Bst {
     public static int findSum(int arr[]){
         int sum=0;
         for (int i = 0; i <arr.length ; i++) {
@@ -13,7 +13,7 @@ public class Best {
      * @param arr the array we want serach.
      * @return the max sum.
      */
-    public static int best(int arr[]){
+    public static int bst(int arr[]){
         int n = arr.length;
         int ans[] = new int[3];
         int max,sum,start,end;
@@ -69,16 +69,16 @@ public class Best {
      * @param arr the arr we want found the max sum of sub array.
      * @return the max sum.
      */
-    public static int roundBest(int arr[]){
+    public static int roundBst(int arr[]){
         int arraySum= findSum(arr);
-        int BestSum = best(arr);
+        int BstSum = bst(arr);
         int negArr[] = new int[arr.length];
         for (int i = 0; i <arr.length ; i++) {
             negArr[i]= -arr[i];
         }
-        int sumNeg = best(negArr);
+        int sumNeg = bst(negArr);
         int totalSum;
-        totalSum = Math.max(BestSum,arraySum+sumNeg);
+        totalSum = Math.max(BstSum,arraySum+sumNeg);
         return totalSum;
     }
 
@@ -108,10 +108,10 @@ public class Best {
     }
 
 
-    //hello myname is orian.
+    //hello myname is ariel.
     public static void main(String[] args) {
         int arr[] = {1,3,-10,5};
-        System.out.println(roundBest(arr));
+        System.out.println(roundBst(arr));
     }
 
 
